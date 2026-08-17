@@ -1,0 +1,709 @@
+/* =========================================================
+   GODAVARI PUSHKARALU — CULTURAL UI THEME
+   Rajahmundry / Godavari inspired
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT COLORS
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+:root {
+  /* Deep Godavari River */
+  --primary-navy: #06141f;
+  --secondary-navy: #0b2433;
+  --river-deep: #073b4c;
+  --river-blue: #087ea4;
+  --river-light: #38a9c9;
+
+  /* Andhra / temple inspired */
+  --saffron-accent: #f59e0b;
+  --saffron-light: #ffb52e;
+  --temple-gold: #d4a72c;
+  --gold-light: #f6d365;
+
+  /* Warm cultural tones */
+  --terracotta: #a84b2a;
+  --terracotta-light: #d2693c;
+  --kumkum: #c0392b;
+
+  /* Backgrounds */
+  --card-bg: rgba(12, 34, 47, 0.82);
+  --card-bg-light: rgba(22, 52, 66, 0.82);
+
+  /* Borders */
+  --border-color: rgba(246, 211, 101, 0.18);
+  --border-gold: rgba(245, 158, 11, 0.35);
+
+  /* Text */
+  --text-primary: #fffaf0;
+  --text-secondary: #d7e1e5;
+  --text-muted: #94aeb8;
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Godavari */
+  --primary-navy: #06141f;
+  --secondary-navy: #0b2635;
+  --river-blue: #087ea4;
+  --river-light: #38bdf8;
+
+  /* Temple / Pushkaralu */
+  --saffron-accent: #f59e0b;
+  --saffron-light: #ffbf47;
+  --temple-gold: #d4a72c;
+
+  /* Andhra cultural tones */
+  --terracotta: #a84b2a;
+  --kumkum: #c0392b;
+
+  /* Cards */
+  --card-bg: rgba(10, 35, 48, 0.84);
+  --border-color: rgba(246, 211, 101, 0.18);
+
+  /* Text */
+  --text-primary: #fffaf0;
+  --text-secondary: #d7e1e5;
+  --text-muted: #94aeb8;
+}
+
+
+/* =========================================================
+   SUBTLE CULTURAL TEXTURE
+   ========================================================= */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  opacity: 0.18;
+
+  background-image:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 183, 77, 0.25) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 255, 255, 0.12) 1px,
+      transparent 1px
+    );
+
+  background-size: 32px 32px;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.font-heading {
+  /*
+    Cinzel gives a traditional temple-inscription feel.
+    Georgia is the fallback if Cinzel isn't loaded.
+  */
+  font-family:
+    "Cinzel",
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  letter-spacing: 0.02em;
+}
+
+.font-body {
+  font-family:
+    "Plus Jakarta Sans",
+    "Segoe UI",
+    Arial,
+    sans-serif !important;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   GODAVARI GRADIENT TEXT
+   ========================================================= */
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #5ed6f5 0%,
+    #f6d365 55%,
+    #f59e0b 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   SAFFRON GRADIENT
+   ========================================================= */
+
+.gradient-saffron {
+  background: linear-gradient(
+    135deg,
+    #ffcf5c 0%,
+    #f59e0b 50%,
+    #d97706 100%
+  );
+}
+
+
+/* =========================================================
+   RIVER GRADIENT
+   ========================================================= */
+
+.gradient-river {
+  background: linear-gradient(
+    135deg,
+    #38bdf8 0%,
+    #087ea4 50%,
+    #064e63 100%
+  );
+}
+
+
+/* =========================================================
+   GLASS CARD — WARM CULTURAL VERSION
+   ========================================================= */
+
+.glass-card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(19, 50, 65, 0.88),
+      rgba(8, 29, 41, 0.84)
+    ) !important;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(245, 158, 11, 0.16);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  overflow: hidden;
+}
+
+
+/*
+  Thin golden decorative line at the top
+*/
+
+.glass-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(246, 211, 101, 0.55),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.glass-card-hover {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(246, 211, 101, 0.38);
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(245, 158, 11, 0.08);
+}
+
+
+/* =========================================================
+   CULTURAL SECTION DIVIDER
+   ========================================================= */
+
+.cultural-divider {
+  width: 100%;
+  height: 2px;
+
+  margin: 16px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(245, 158, 11, 0.7),
+      rgba(56, 189, 248, 0.5),
+      rgba(245, 158, 11, 0.7),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   GOLDEN DECORATIVE BORDER
+   ========================================================= */
+
+.cultural-border {
+  border: 1px solid rgba(245, 158, 11, 0.25);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.badge-low {
+  background: rgba(16, 185, 129, 0.15);
+
+  color: #6ee7b7;
+
+  border:
+    1px solid rgba(16, 185, 129, 0.32);
+}
+
+
+.badge-med {
+  background: rgba(245, 158, 11, 0.16);
+
+  color: #fcd34d;
+
+  border:
+    1px solid rgba(245, 158, 11, 0.35);
+}
+
+
+.badge-high {
+  background: rgba(220, 38, 38, 0.16);
+
+  color: #fca5a5;
+
+  border:
+    1px solid rgba(239, 68, 68, 0.35);
+}
+
+
+.badge-full {
+  background: rgba(148, 163, 184, 0.16);
+
+  color: #e2e8f0;
+
+  border:
+    1px solid rgba(148, 163, 184, 0.35);
+}
+
+
+.badge-vip {
+  background: rgba(168, 85, 247, 0.16);
+
+  color: #d8b4fe;
+
+  border:
+    1px solid rgba(168, 85, 247, 0.35);
+}
+
+
+/* =========================================================
+   PUSHKARALU / SPIRITUAL STATUS
+   ========================================================= */
+
+.badge-spiritual {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(245, 158, 11, 0.20),
+      rgba(217, 119, 6, 0.12)
+    );
+
+  color: #fcd34d;
+
+  border:
+    1px solid rgba(245, 158, 11, 0.4);
+
+  box-shadow:
+    0 0 15px rgba(245, 158, 11, 0.08);
+}
+
+
+/* =========================================================
+   CAPACITY PROGRESS BAR
+   ========================================================= */
+
+.progress-bar-bg {
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 9999px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: 9999px;
+
+  transition:
+    width 0.5s ease;
+
+  background:
+    linear-gradient(
+      90deg,
+      #087ea4,
+      #38bdf8,
+      #f59e0b
+    );
+
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+
+/* =========================================================
+   TABLE STYLING
+   ========================================================= */
+
+table {
+  border-collapse: collapse;
+}
+
+
+thead {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 24, 34, 0.95),
+      rgba(7, 31, 43, 0.95)
+    );
+}
+
+
+thead th {
+  color: #cbd5e1;
+
+  border-bottom:
+    1px solid rgba(245, 158, 11, 0.18);
+}
+
+
+tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+
+tbody tr:hover {
+  background:
+    rgba(245, 158, 11, 0.045) !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  font-family:
+    "Plus Jakarta Sans",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+button:focus-visible {
+  outline:
+    2px solid #f59e0b;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   CUSTOM SCROLLBARS
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #06141f;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      #0b526b,
+      #087ea4
+    );
+
+  border-radius: 999px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #f59e0b,
+      #d97706
+    );
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(245, 158, 11, 0.35);
+
+  color: white;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  transition:
+    color 0.2s ease;
+}
+
+
+a:hover {
+  color: #fbbf24;
+}
+
+
+/* =========================================================
+   IMAGE STYLING
+   ========================================================= */
+
+img {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   GODAVARI HERO / BANNER
+   Use this class anywhere you want a large
+   Rajahmundry river visual.
+   ========================================================= */
+
+.godavari-hero {
+  position: relative;
+
+  min-height: 260px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 20, 29, 0.92),
+      rgba(4, 20, 29, 0.50),
+      rgba(4, 20, 29, 0.30)
+    ),
+    url("/images/godavari-rajahmundry.jpg");
+
+  background-size: cover;
+
+  background-position:
+    center 55%;
+
+  border:
+    1px solid rgba(245, 158, 11, 0.25);
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+
+.godavari-hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 80px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(4, 20, 29, 0.65)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PHOTO MODAL
+   ========================================================= */
+
+.photo-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 24px;
+
+  background:
+    rgba(2, 10, 16, 0.88);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+}
+
+
+.photo-modal img {
+  max-width: 90vw;
+
+  max-height: 85vh;
+
+  object-fit: contain;
+
+  border-radius: 16px;
+
+  border:
+    2px solid rgba(245, 158, 11, 0.35);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================================
+   PRINT STYLES
+   ========================================================= */
+
+@media print {
+
+  body {
+    background: white !important;
+
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    background-attachment: scroll;
+
+    background-position:
+      center top;
+  }
+
+  .glass-card {
+    border-radius: 14px;
+  }
+
+  .godavari-hero {
+    min-height: 220px;
+
+    background-position:
+      center center;
+  }
+}
