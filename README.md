@@ -1,5 +1,7 @@
 #  Pushkara Mitra – Digital Pilgrim Management & Safety Ecosystem
 **Status:** Ongoing Project
+
+
 **A digital platform designed to support pilgrim management, crowd coordination, and safety during Godavari Pushkaralu 2027.**
 
 🔗 **Live Demo:** https://pushkaramitra.netlify.app/
