@@ -36,13 +36,13 @@ The project aims to address challenges such as overcrowding, difficulty finding 
 
 * **React.js** – Component-based user interface
 * **JavaScript** – Application logic and interactions
-* **HTML5 & CSS3** – Structure and styling
+* **HTML5 & Tailwand CSS** – Structure and styling
 * **Vite** – Frontend development and build tool
 
 ### Backend
 
-* **Python**
-* **Flask** – REST API development
+* **Node.js**
+* **Express.js** – REST API development
 
 ### Database & Services
 
